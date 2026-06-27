@@ -30,7 +30,7 @@ go mod tidy
 go run main.go
 ```
 
-3.Open your browser or API client at `http://localhost:8080`.
+3. Open your browser or API client at `http://localhost:8080`.
 
 ## Deployment
 
