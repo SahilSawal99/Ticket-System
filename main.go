@@ -19,7 +19,6 @@ func registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("/", rootHandler)
 	mux.HandleFunc("/auth/login", controller.LoginHandler)
 	mux.HandleFunc("/auth/register", controller.RegisterHandler)
-	mux.HandleFunc("/health-check", controller.HealthHandler)
 	mux.HandleFunc("/health", controller.HealthHandler)
 
 	securedTickets := auth.AuthMiddleware(controller.TicketsHandler)
@@ -34,10 +33,10 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	_, _ = w.Write([]byte(`{"status":"ok","endpoint":"/health-check"}`))
+	_, _ = w.Write([]byte(`{"status":"ok","endpoint":"/health"}`))
 }
 
 func startServer(handler http.Handler) {
-	fmt.Println("Server started; available endpoints: /, /health-check, /auth/login, /auth/register, /tickets")
+	fmt.Println("Server started; available endpoints: /, /health, /auth/login, /auth/register, /tickets")
 	log.Fatal(http.ListenAndServe(":8080", handler))
 }

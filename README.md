@@ -12,7 +12,7 @@ A lightweight Go backend for managing tickets with JWT authentication and an in-
 
 ## Endpoints
 
-- `GET /health-check` — service health check
+- `GET /health` — service health check
 - `POST /auth/register` — register a new user
 - `POST /auth/login` — login and receive a JWT
 - `POST /tickets` — create a new ticket (requires Bearer token)
