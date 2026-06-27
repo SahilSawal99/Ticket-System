@@ -67,7 +67,3 @@ docker run -d -p 8080:8080 --name ticket-service ticket-system:latest
 - `internal/service` — business logic and validation
 - `internal/repository` — in-memory data store operations
 - `internal/model` — shared data model definitions
-
-## Testing
-
-There are no automated tests included at this time. Use `go test ./...` to verify compilation, or add targeted tests in the future.
