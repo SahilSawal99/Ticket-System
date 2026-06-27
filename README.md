@@ -32,6 +32,12 @@ go run main.go
 
 3.Open your browser or API client at `http://localhost:8080`.
 
+## Deployment
+
+The application is also deployed at:
+
+- `https://ticket-system-etst.onrender.com`
+
 ## Docker
 
 Build the Docker image for `linux/amd64` and tag it:
